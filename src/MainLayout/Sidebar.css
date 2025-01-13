@@ -1,0 +1,49 @@
+.sidebar {
+    height: 100vh;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #f8f9fa; /* Bootstrap's light bg color */
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .sidebar-brand {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: #343a40;
+  }
+  
+  .sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .sidebar-nav .nav-item {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #343a40;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+  }
+  
+  .sidebar-nav .nav-item.active {
+    background-color: #e9ecef;
+    font-weight: bold;
+  }
+  
+  .sidebar-nav .nav-item:hover {
+    background-color: #e9ecef;
+  }
+  
+  .sidebar-nav .nav-item.disabled {
+    color: #6c757d;
+    pointer-events: none;
+  }
+  

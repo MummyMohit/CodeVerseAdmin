@@ -1,0 +1,8 @@
+.custom-card {
+    width: auto !important;
+    height: 207px !important;
+    padding: 27px !important;
+    /* Add more specific styles for this card */
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+}
