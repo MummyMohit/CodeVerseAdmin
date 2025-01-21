@@ -40,9 +40,9 @@ const UserList = () => {
       if (editId !== null) {
         const response = await axios.put(`https://dummyjson.com/users/${editId}`, payload);
         const updatedUser = response.data;
-        setData((prevData) =>
-          prevData.map((item) => (item.id === editId ? { ...item, ...updatedUser } : item))
-        );
+        console.log(updatedUser,"updatedUser ofsjl")
+        const updateData = data.map((item)=> item.id === editId ? {...item, ...updatedUser}:item)
+        setData(updateData)
         setEditId(null);
       } else {
         const response = await axios.post('https://dummyjson.com/users/add', payload);
@@ -57,7 +57,9 @@ const UserList = () => {
   const handleDelete = async (id) => {
     try {
       await axios.delete(`https://dummyjson.com/users/${id}`);
-      setData((prevData) => prevData.filter((item) => item.id !== id));
+      const deleteresponse = data.filter((item)=>item.id !==id)
+      setData(deleteresponse)
+      // setData((prevData) => prevData.filter((item) => item.id !== id));
     } catch (error) {
       console.error('Error deleting user:', error);
     }

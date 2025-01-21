@@ -4,6 +4,7 @@ import Layout from './MainLayout/Layout'
 import Home from './Components/Home'
 import UserList from './Components/UserList'
 import Profile from './Components/Profile'
+import Practice from './Components/Practice'
 export const router = createBrowserRouter([
     {
      path: '/',
@@ -26,6 +27,10 @@ export const router = createBrowserRouter([
            {
             path: 'profile',
             element: <Profile/>
+          },
+          {
+            path: 'practice',
+            element: <Practice/>
           },
         ]
       }

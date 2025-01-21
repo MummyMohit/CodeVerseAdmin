@@ -1,10 +1,32 @@
 .v1-img{
+    max-width: 100%;
     width: 100%;
     height: 100vh;
 }
+.login-button{
+     width: 100%;
+     max-width: 100%;
+}
+input:-webkit-autofill {
+    background-color: transparent !important; /* Make the background transparent */
+    color: blue !important; /* Change the text color to blue */
+    transition: background-color 5000s ease-in-out 0s, color 5000s ease-in-out 0s; /* Smooth transition for background and text color */
+}
+
+input:-webkit-autofill:focus {
+    background-color: transparent !important; /* Keep the background transparent on focus */
+    color: blue !important; /* Keep text color blue on focus */
+}
+
+/* Some browsers may require this extra rule for better control over the autofilled text color */
+input:-webkit-autofill::first-line {
+    color: blue !important; /* Ensure first line of autofilled text is also blue */
+}
+
+
 
 .main-form{
-    margin:87px 72px
+    padding-top: 14rem;
 }
 /* Small screens (300px to 480px) */
 @media screen and (min-width: 320px) and (max-width: 480px) {
