@@ -3,7 +3,6 @@ import { createContext, useState } from "react";
 export const UserContext = createContext();
 
 const Context = ({ children }) => {
-
     const [data, setData] = useState([])
 
     return (
